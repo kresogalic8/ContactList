@@ -1,0 +1,7 @@
+<app-navigation></app-navigation>
+
+<app-search-input></app-search-input>
+
+<div class="favorites">
+    <app-contact-card *ngFor="let favorite of favorites | search: searchText" [contact]="favorite"></app-contact-card>
+</div>

@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/styles/mixins/mixins";
+// base
+@import "./assets/styles/base/reset";
+@import "./assets/styles/base/variables";
+@import "./assets/styles/base/global";
+@import "./assets/styles/base/typography";
+@import "./assets/styles/base/inputs";
+@import "./assets/styles/base/buttons";

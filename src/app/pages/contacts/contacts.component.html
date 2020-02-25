@@ -1,0 +1,12 @@
+<app-navigation></app-navigation>
+
+<app-search-input></app-search-input>
+
+<div class="contacts">
+    <div class="card--new" [routerLink]="['/add-contact']">
+        <i class="material-icons">add</i>
+        <h5>Add new</h5>
+    </div>
+    <app-contact-card *ngFor="let contact of contacts" [contact]="contact" [routerLink]="['/details/', contact.id]">
+    </app-contact-card>
+</div>

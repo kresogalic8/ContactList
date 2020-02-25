@@ -1,0 +1,25 @@
+/* Media-queries ---------------------------------------------------- */
+
+@mixin mqMax($maxWidth) {
+    @media screen and (max-width: $maxWidth) {
+      @content;
+    }
+  }
+  
+  @mixin mqMin($minWidth) {
+    @media screen and (min-width: $minWidth) {
+      @content;
+    }
+  }
+  
+  @mixin mqRange($minWidth, $maxWidth) {
+    @media screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+      @content;
+    }
+  }
+  
+  @mixin mqRangeExclude($ltWidth, $gtWidth) {
+    @media screen and (max-width: $ltWidth), screen and (min-width: $gtWidth) {
+      @content;
+    }
+  }

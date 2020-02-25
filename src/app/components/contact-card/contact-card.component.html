@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="card--actions">
+        <div>
+            <button type="button" class="btn" (click)="favorite($event)">
+                <i class="material-icons">{{contact.favorite ? 'favorite' : 'favorite_outline'}}</i>
+            </button>
+        </div>
+
+        <div>
+            <button type="button" class="btn" [routerLink]="['/edit', contact.id]"
+                routerLinkActive="router-link-active">
+                <i class="material-icons">edit</i>
+            </button>
+            <button type="button" class="btn">
+                <i class="material-icons">delete_outline</i>
+            </button>
+        </div>
+    </div>
+    <div class="card--content">
+        <img src="https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg" alt="">
+        <h3>{{ contact.fullName }}</h3>
+    </div>
+</div>

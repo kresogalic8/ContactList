@@ -1,0 +1,58 @@
+@import "../../../assets/styles/base/variables";
+@import "../../../assets/styles/mixins/mixins";
+
+.contacts {
+    @include mqMin($tablet-min) {
+        display: grid;
+        grid-template-columns: repeat(4, 3fr);
+        column-gap: 3rem;
+        row-gap: 3rem;
+        margin: 5rem 15rem;
+    }
+
+    @include mqMax($mobile-max) {
+        padding: 0 1rem;
+    }
+
+}
+
+.card--new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px dashed $primary-color;
+    border-radius: 5px;
+    color: $primary-color;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all .3s ease;
+    min-height: 150px;
+
+    @include mqMax($mobile-max) {
+        min-height: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 60px;
+        padding: 0 2rem;
+    }
+
+    i {
+        margin-bottom: 1rem;
+        font-size: 3rem;
+
+        @include mqMax($mobile-max) {
+            margin-bottom: 0;
+            margin-right: 1rem;
+        }
+    }
+
+    h5 {
+        font-weight: 400;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}

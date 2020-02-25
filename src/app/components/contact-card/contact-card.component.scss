@@ -1,0 +1,99 @@
+@import "../../../assets/styles/base/variables";
+@import "../../../assets/styles/mixins/mixins";
+
+.card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid rgba(187, 196, 195, 0.4);
+    border-radius: 4px;
+    transition: all .3s ease;
+    height: 150px;
+    justify-content: center;
+
+    @include mqMax($mobile-max) {
+        margin-top: 1rem;
+        flex-direction: row-reverse;
+        align-items: center;
+        height: auto;
+        padding: 1rem;
+    }
+
+    &--actions {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+        z-index: 10;
+        top: 0;
+
+        @include mqMax($mobile-max) {
+            position: relative;
+            justify-content: flex-start;
+            flex: 1;
+            padding: 0;
+        }
+
+        .btn {
+            padding: 0;
+
+            i {
+                color: #BBC4C3;
+            }
+
+            &:hover {
+                i {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        div:last-child {
+            .btn {
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    &--content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include mqMax($mobile-max) {
+            flex-direction: row;
+            flex: 2;
+            justify-content: flex-start;
+        }
+
+        img {
+            min-width: 66px;
+            height: 66px;
+            border-radius: 50%;
+            border: 3px solid #eee;
+            margin-bottom: 1.3rem;
+
+            @include mqMax($mobile-max) {
+                min-width: 46px;
+                height: 46px;
+                margin: 0 2rem 0 0;
+            }
+        }
+
+        h3 {
+            color: #BBC4C3;
+            font-size: 1.8rem;
+
+            @include mqMax($mobile-max) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &:hover {
+        border: 1px solid $primary-color;
+        cursor: pointer;
+    }
+}

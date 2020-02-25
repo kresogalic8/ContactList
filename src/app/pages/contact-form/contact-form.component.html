@@ -1,0 +1,65 @@
+<form [formGroup]="form" class="form">
+
+    <div class="form--avatar">
+        <img src="" alt="">
+    </div>
+    <div class="form--content">
+
+        <div class="form--content-header">
+            <button type="button" class="btn" [routerLink]="['/']">
+                <i class="material-icons">subdirectory_arrow_left</i>
+            </button>
+        </div>
+
+        <div class="form--content-body">
+            <div class="input--field">
+                <label for="">
+                    <i class="material-icons">perm_identity</i>
+                    full name
+                </label>
+                <input type="text" formControlName="fullName" placeholder="Full name">
+            </div>
+
+            <div class="input--field">
+                <label for="">
+                    <i class="material-icons">email</i>
+                    email
+                </label>
+                <input type="text" formControlName="email" placeholder="Email">
+            </div>
+
+            <div class="input--field">
+
+                <label for="">
+                    <i class="material-icons">phone</i>
+                    numbers
+                </label>
+
+                <div class="input--grid" *ngFor="let numberGroup of form.get('numbers').controls;let i = index"
+                    [formGroup]="numberGroup">
+                    <div>
+                        <input type="text" formControlName="value" placeholder="Number">
+                    </div>
+
+                    <div>
+                        <input type="text" formControlName="type" placeholder="Cell">
+                    </div>
+                    <button type="button" class="btn" (click)="deleteNumber(i)">
+                        <i class="material-icons">highlight_off</i>
+                    </button>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn--add" (click)="addNewNumber()">
+                <i class="material-icons">add_circle_outline</i>
+                Add number
+            </button>
+
+            <div class="actions">
+                <button type="button" class="btn btn--secondary" [routerLink]="['/']">Cancel</button>
+                <button type="button" class="btn btn--primary"
+                    (click)="isEdit ? updateContact() : saveContact()">{{isEdit ? 'Update' : 'Save'}}</button>
+            </div>
+        </div>
+    </div>
+</form>

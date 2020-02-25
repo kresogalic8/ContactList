@@ -1,0 +1,68 @@
+/*==================================
+=            Typography            =
+==================================*/
+
+p {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+    font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    margin-top: 0;
+    font-family: $primary-font;
+}
+
+h1 {
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+h4 {
+    font-size: 2.4rem;
+}
+
+h5 {
+    font-size: 1.8rem;
+}
+
+h6 {
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: $primary-color;
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer
+    }
+}
+
+ul {
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+
+    li {
+        margin-bottom: 1rem;
+    }
+}
+
+strong {
+    font-weight: bold;
+}

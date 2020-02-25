@@ -1,0 +1,16 @@
+@import "../../../assets/styles/base/variables";
+@import "../../../assets/styles/mixins/mixins";
+
+.favorites {
+    @include mqMin($tablet-min) {
+        display: grid;
+        grid-template-columns: repeat(4, 3fr);
+        column-gap: 3rem;
+        row-gap: 3rem;
+        margin: 5rem 15rem;
+    }
+
+    @include mqMax($mobile-max) {
+        padding: 0 1rem;
+    }
+}

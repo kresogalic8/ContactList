@@ -1,0 +1,62 @@
+/*============================
+=          Global            =
+============================*/
+
+* {
+    box-sizing: border-box !important;
+    outline: none;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+    position: relative;
+}
+
+body {
+    min-height: 100%;
+    font-size: 1.4rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $primary-font;
+    font-weight: 400;
+    color: #383b41;
+
+    @include mqMax($mobile-max) {
+        overflow-x: hidden;
+    }
+
+    &.loading {
+        overflow: hidden;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.page {
+    // padding-top: 88px;
+    display: block;
+
+    &--header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0;
+    }
+}

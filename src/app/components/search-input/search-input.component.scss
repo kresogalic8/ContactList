@@ -1,0 +1,32 @@
+@import "../../../assets/styles/base/variables";
+@import "../../../assets/styles/mixins/mixins";
+
+:host {
+    height: 60px;
+    width: 540px;
+    box-shadow: 0 2px 34px 0 #E3E3E3;
+    display: block;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #EAEAEA;
+    border-radius: 4px;
+
+    @include mqMax($mobile-max) {
+        width: calc(100% - 4rem);
+        margin-bottom: 2.5rem;
+    }
+
+    input {
+        height: 100%;
+        padding-left: 5rem;
+    }
+
+    i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 2rem;
+        color: #BBC4C3;
+    }
+}

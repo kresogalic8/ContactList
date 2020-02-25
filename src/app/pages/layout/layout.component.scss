@@ -1,0 +1,16 @@
+@import "../../../assets/styles/base/variables";
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    border-bottom: 10px solid #93D0D5;
+    background-color: $primary-color;
+    background: rgb(52, 159, 170);
+    background: linear-gradient(90deg, rgba(52, 159, 170, 1) 0%, rgba(113, 188, 195, 1) 100%);
+
+    img {
+        width: 200px;
+    }
+}

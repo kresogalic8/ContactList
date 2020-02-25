@@ -1,0 +1,31 @@
+// fonts
+$primary-font: 'Lato',
+sans-serif !default;
+
+// colors
+$primary-color: #349FAA !default;
+$secondary-color: #71BCC3 !default;
+$error-color: #FF4F66 !default;
+
+// breakpoints
+$mobile-s-max: 479px;
+
+$mobile-min: 480px;
+$mobile-max: 767px;
+
+$tablet-min: 768px;
+$tablet-max: 1223px;
+
+$desktop-min: 1224px;
+$desktop-max: 1439px;
+
+$desktop-l-min: 1440px;
+
+// typography
+$heading1: 56px;
+$heading2: 48px;
+$heading3: 40px;
+$heading4: 30px;
+$heading5: 24px;
+$heading6: 16px;
+$subheading: 30px;

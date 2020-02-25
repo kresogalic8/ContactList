@@ -1,0 +1,114 @@
+@import "../../../assets/styles/base/variables";
+@import "../../../assets/styles/mixins/mixins";
+
+.form {
+    max-width: 844px;
+    margin: 5.7rem auto;
+    width: 100%;
+
+    @include mqMin($tablet-min) {
+        display: grid;
+        grid-template-columns: 186px 1fr;
+        column-gap: 30px;
+    }
+
+    @include mqMax($mobile-max) {
+        padding: 0 2rem;
+    }
+
+    &--avatar {
+        img {
+            width: 183px;
+            height: 183px;
+            border: 3px solid rgba(187, 196, 195, 0.3);
+            border-radius: 50%;
+        }
+    }
+
+    &--content {
+        &-header {
+            height: 95px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #BBC4C3;
+
+            i {
+                color: #BBC4C3;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        &-body {
+            .input--field {
+                border-top: 2px solid $primary-color;
+                padding-top: 2rem;
+
+                label {
+                    display: flex;
+                    align-items: center;
+                    color: $primary-color;
+                    font-weight: bold;
+                    margin-bottom: 2rem;
+
+                    i {
+                        margin-right: 2rem;
+                    }
+                }
+
+                &:not(:first-child) {
+                    margin-top: 3rem;
+                }
+
+                .input--grid {
+                    @include mqMin($tablet-min) {
+                        display: grid;
+                        grid-template-columns: 300px 240px 1fr;
+                        column-gap: 30px;
+                    }
+
+                    margin-bottom: 2rem;
+
+                    .btn {
+                        i {
+                            font-size: 4rem;
+                            color: #BBC4C3;
+                        }
+                    }
+                }
+            }
+
+            .btn--add {
+                color: $primary-color;
+                display: flex;
+                align-items: center;
+                font-size: 1.4rem;
+                padding: 0;
+                margin-top: 5rem;
+
+                i {
+                    margin-right: 1.5rem;
+                    font-size: 4rem;
+                }
+            }
+
+            .actions {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10rem;
+
+                .btn {
+                    border-radius: 3rem;
+                    width: 160px;
+
+                    &--secondary {
+                        background-color: #BBC4C3;
+                    }
+                }
+            }
+        }
+    }
+}

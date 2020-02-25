@@ -1,0 +1,98 @@
+@import "../../../assets/styles/base/variables";
+
+.details {
+    max-width: 844px;
+    margin: 5.7rem auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 186px 1fr;
+    column-gap: 30px;
+
+    &--avatar {
+        img {
+            width: 183px;
+            height: 183px;
+            border: 3px solid rgba(187, 196, 195, 0.3);
+            border-radius: 50%;
+        }
+    }
+
+    &--content {
+        &-header {
+            margin-bottom: 6rem;
+            border-bottom: 2px solid $primary-color;
+            height: 95px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #BBC4C3;
+
+            i {
+                color: #BBC4C3;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+
+            div:first-child {
+                display: flex;
+            }
+        }
+
+        &-body {
+            padding: 0 6.5rem;
+
+            .item {
+                display: grid;
+                grid-template-columns: 125px 1fr;
+
+                >div:first-child {
+                    display: flex;
+                    height: 40px;
+                    color: $primary-color;
+                    margin-bottom: 7rem;
+
+                    i {
+                        margin-right: 1.5rem;
+                    }
+
+                    span {
+                        font-weight: bold;
+                        line-height: 1.9rem;
+                    }
+                }
+
+                >div:last-child {
+                    p {
+                        margin: 0;
+                        color: #BBC4C3;
+                        font-size: 1.6rem;
+                        line-height: 1.9rem;
+                    }
+                }
+
+                &--number {
+                    display: grid;
+                    grid-template-columns: 100px 1fr;
+                    margin-bottom: 4rem;
+
+                    span {
+                        color: #BBC4C3;
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                        line-height: 1.9rem;
+                    }
+
+                    p {
+                        text-decoration: underline;
+                        color: #BBC4C3;
+                        font-size: 16px;
+                        line-height: 20px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
